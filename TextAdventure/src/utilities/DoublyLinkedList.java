@@ -167,7 +167,5 @@ public class DoublyLinkedList<Element> implements Iterable<Element> {
 			// TODO Auto-generated method stub
 			
 		}
-		
-		
 	}
 }
