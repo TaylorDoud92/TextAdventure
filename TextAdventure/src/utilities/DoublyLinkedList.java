@@ -1,7 +1,7 @@
 package utilities;
 
-import java.util.Iterator;
 import java.util.ListIterator;
+
 /**
  * DoublyLinkedList to store objects and have them linked to each other in a list.
  * 
@@ -26,6 +26,7 @@ public class DoublyLinkedList<Element> implements Iterable<Element> {
 		pre.next = post;
 		post.prev = pre;
 	}
+	
 	/**
 	 * Nested Node container class which will hold an object when its placed into
 	 * the list.
@@ -45,15 +46,19 @@ public class DoublyLinkedList<Element> implements Iterable<Element> {
 			return s.toString();
         }
     }
-
+	
 	/**
-	 * 
+	 * Method to return a new LinkedListIterator
 	 */
 	@Override
 	public ListIterator<Element> iterator(){
-		return new LinkedlistIterator();
+		return new LinkedListIterator();
 	}
 	
+	/**
+	 * Method for the linked list that adds an object to the list.
+	 * @param element object to be added to the list.
+	 */
 	public void add(Element element){
 		Node prev = post.prev;
 		Node newNode = new Node();
@@ -65,6 +70,11 @@ public class DoublyLinkedList<Element> implements Iterable<Element> {
 		n++;
 	}
 	
+	/**
+	 * Method to return whether or not the list is empty. 
+	 * 
+	 * @return boolean value that will be true if list is empty and false if not.
+	 */
 	public boolean isEmpty(){
 		if(n == 0)
 			return true;
@@ -72,10 +82,17 @@ public class DoublyLinkedList<Element> implements Iterable<Element> {
 			return false;
 	}
 	
+	/**
+	 * method to return the size of the list.
+	 * 
+	 * @return size of the list in an integer value. 
+	 */
 	public int size(){
 		return n;
 	}
-	
+	/**
+	 * method that that returns a String value of all elements in the list.
+	 */
 	public String toString(){
 		StringBuilder s = new StringBuilder();
 		for(Element element : this){
@@ -84,7 +101,12 @@ public class DoublyLinkedList<Element> implements Iterable<Element> {
 		return s.toString();
 	}
 	
-	private class LinkedlistIterator implements ListIterator<Element>{
+	/**
+	 * Linked list Iterator that controls the list.
+	 * @author Taylor Doud
+	 *
+	 */
+	private class LinkedListIterator implements ListIterator<Element>{
 
 		@Override
 		public void add(Element element) {
