@@ -1,5 +1,7 @@
 package items;
 
+import support.BaseItem;
+
 public class potion extends BaseItem {
 	
 	public potion() {

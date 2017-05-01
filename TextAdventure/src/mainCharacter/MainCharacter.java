@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import exceptions.ItemMissingException;
-import items.BaseItem;
+import support.BaseItem;
 import support.CharacterBase;
 
 public class MainCharacter extends CharacterBase implements Serializable {

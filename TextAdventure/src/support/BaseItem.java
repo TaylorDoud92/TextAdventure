@@ -1,4 +1,4 @@
-package items;
+package support;
 
 public abstract class BaseItem {
 
