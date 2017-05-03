@@ -1,6 +1,6 @@
 package support;
 
-import java.net.NoRouteToHostException;
+
 import java.util.ArrayList;
 
 public abstract class RoomBase {
@@ -22,7 +22,7 @@ public abstract class RoomBase {
 		this.eastDoor = eastDoor;
 		this.westDoor = westDoor;
 	}
-
+	
 	public String getName() {
 		return name;
 	}

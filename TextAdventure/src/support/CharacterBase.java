@@ -9,7 +9,7 @@ public abstract class CharacterBase {
 	private double currentHealth;
 	
 	public CharacterBase(String name,double totalHealth) {
-		this.name = name;
+		this.setName(name);
 		this.totalHealth = totalHealth;
 		this.currentHealth = totalHealth;
 	}
@@ -38,5 +38,13 @@ public abstract class CharacterBase {
 	public double healCharacter(double heal){
 		currentHealth=+heal;
 		return currentHealth;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }

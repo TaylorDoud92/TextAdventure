@@ -4,7 +4,6 @@ import java.util.Random;
 
 import mainCharacter.MainCharacter;
 import support.RoomBase;
-import support.CharacterBase;
 
 public class TrapRoom extends RoomBase 
 {
