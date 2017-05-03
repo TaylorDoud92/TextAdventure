@@ -3,10 +3,10 @@ package world;
 import java.util.Random;
 
 import mainCharacter.MainCharacter;
-import support.BaseRoom;
+import support.RoomBase;
 import support.CharacterBase;
 
-public class TrapRoom extends BaseRoom 
+public class TrapRoom extends RoomBase 
 {
 
 	private String description;
@@ -16,12 +16,11 @@ public class TrapRoom extends BaseRoom
 		super(name, description, southDoor, northDoor, westDoor, eastDoor);
 	}
 
-	public void activate(boolean activated, MainCharacter player){
+	public MainCharacter activate(boolean activated, MainCharacter player){
 		if(activated == true){
 			Random rand = new Random();
-			player.damageCharacter(rand.nextInt(50));
-			
-			
+			player.damageCharacter(rand.nextInt(50));	
 		}
+		return player;
 	}
 }

@@ -1,12 +1,12 @@
 package support;
 
-public abstract class BaseItem {
+public abstract class ItemBase {
 
 	private String name;
 	
 	private String description;
 	
-	public BaseItem(String name, String description){
+	public ItemBase(String name, String description){
 		this.name = name;
 		this.description = description;
 	}
@@ -27,6 +27,6 @@ public abstract class BaseItem {
 		this.description = description;
 	}
 	
-	public abstract void action();
+	public abstract CharacterBase action(CharacterBase character);
 	
 }

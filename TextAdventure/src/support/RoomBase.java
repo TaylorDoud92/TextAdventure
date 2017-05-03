@@ -3,17 +3,17 @@ package support;
 import java.net.NoRouteToHostException;
 import java.util.ArrayList;
 
-public abstract class BaseRoom {
+public abstract class RoomBase {
 
 	private String name;
 
 	private String description;
 
-	private ArrayList<BaseItem> itemsInRoom;
+	private ArrayList<ItemBase> itemsInRoom;
 
 	private boolean southDoor, northDoor, eastDoor, westDoor;
 
-	public BaseRoom(String name, String description, boolean southDoor, boolean northDoor, boolean westDoor,
+	public RoomBase(String name, String description, boolean southDoor, boolean northDoor, boolean westDoor,
 			Boolean eastDoor) {
 		this.name = name;
 		this.description = description;
@@ -39,11 +39,11 @@ public abstract class BaseRoom {
 		this.description = description;
 	}
 
-	public ArrayList<BaseItem> getItemsInRoom() {
+	public ArrayList<ItemBase> getItemsInRoom() {
 		return itemsInRoom;
 	}
 
-	public void setItemsInRoom(ArrayList<BaseItem> itemsInRoom) {
+	public void setItemsInRoom(ArrayList<ItemBase> itemsInRoom) {
 		this.itemsInRoom = itemsInRoom;
 	}
 

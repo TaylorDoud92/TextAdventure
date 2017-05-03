@@ -4,31 +4,31 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import exceptions.ItemMissingException;
-import support.BaseItem;
+import support.ItemBase;
 import support.CharacterBase;
 
 public class MainCharacter extends CharacterBase implements Serializable {
 
 	private static final long serialVersionUID = -9214972243707344043L;
 	
-	private ArrayList<BaseItem> inventory; 
+	private ArrayList<ItemBase> inventory; 
 	
 	public MainCharacter(String name, double health){
 		super(name,health);
-		inventory = new ArrayList<BaseItem>();
+		inventory = new ArrayList<ItemBase>();
 	}
 	
-	public BaseItem addToInventory(BaseItem item){
+	public ItemBase addToInventory(ItemBase item){
 		inventory.add(item);
 		return item;
 	}
 	
-	public BaseItem removeFromInventory(BaseItem item){
+	public ItemBase removeFromInventory(ItemBase item){
 		inventory.remove(item);
 		return item;
 	}
 	
-	public BaseItem getFromInventory(BaseItem item){
+	public ItemBase getFromInventory(ItemBase item){
 		int index = inventory.indexOf(item);
 		if(index == -1){
 			try {
@@ -42,7 +42,7 @@ public class MainCharacter extends CharacterBase implements Serializable {
 		return null;
 	}
 	
-	public ArrayList<BaseItem> getInventory(){
+	public ArrayList<ItemBase> getInventory(){
 		return inventory;
 	}
 	

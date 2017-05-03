@@ -1,18 +1,20 @@
 package items;
 
-import support.BaseItem;
+import support.ItemBase;
+import support.CharacterBase;
 
-public class potion extends BaseItem {
+public class potion extends ItemBase {
 	
 	public potion() {
 		super("potion", "this is a potion!");
 	}
 
 	@Override
-	protected void action() {
-		// TODO Auto-generated method stub
-		
+	public CharacterBase action(CharacterBase character) {
+		character.healCharacter(50);
+		if(character.getTotalHealth()<character.getCurrentHealth()){
+			character.setCurrentHealth(character.getTotalHealth());
+		}
+		return character;
 	}
-
-	
 }

@@ -4,14 +4,14 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
-import support.BaseRoom;
+import support.RoomBase;
 
 public class World implements Serializable{
 
 	private static final long serialVersionUID = 252160056106244943L;
 	
-	BaseRoom[][] horizontalRoomList;
-	BaseRoom[] verticalRoomList;
+	RoomBase[][] horizontalRoomList;
+	RoomBase[] verticalRoomList;
 	
 	
 	public World()
@@ -23,10 +23,10 @@ public class World implements Serializable{
 		Random rng = new Random();
 		int randNumber = rng.nextInt(10);
 		
-		horizontalRoomList = new BaseRoom[randNumber][];
+		horizontalRoomList = new RoomBase[randNumber][];
 		
 		for(int i=0;i<randNumber;i++){
-			verticalRoomList = new BaseRoom[randNumber];
+			verticalRoomList = new RoomBase[randNumber];
 		
 			
 			
