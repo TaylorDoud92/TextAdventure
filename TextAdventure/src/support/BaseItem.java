@@ -2,31 +2,31 @@ package support;
 
 public abstract class BaseItem {
 
-	protected String name;
+	private String name;
 	
-	protected String description;
+	private String description;
 	
 	public BaseItem(String name, String description){
 		this.name = name;
 		this.description = description;
 	}
 	
-	protected String getName() {
+	public String getName() {
 		return name;
 	}
 
-	protected void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
-	protected String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
-	protected void setDescription(String description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 	
-	protected abstract void action();
+	public abstract void action();
 	
 }
